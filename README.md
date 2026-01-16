@@ -93,16 +93,37 @@ Run the **full-precision model locally** using Hugging Face `transformers`.
 
 ---
 
-> ## 💡 Low-RAM Alternative (Recommended for Laptops)
->
-> If your system has limited memory, use the **GGUF quantized model**:
->
-> - **Size:** 4.07 GB  
-> - **Backend:** llama.cpp  
-> - **Performance:** Runs efficiently on laptops and low-resource machines
->
-> **Model link:**  
-> https://huggingface.co/yamraj047/nepal-legal-mistral-7b-GGUF
+##🚀 Run GGUF Model Locally (4GB - CPU Optimized)
+
+The quantized GGUF model runs efficiently on CPU with minimal memory requirements.
+
+###📦 Requirements
+
+-Python 3.9+
+-8 GB RAM minimum (CPU only, no GPU needed)
+-Disk space: ~4.5 GB
+---
+
+> ## 🔧 Installation
+
+Step 1: Create and activate virtual environment
+
+bash
+python3 -m venv legal-env
+source legal-env/bin/activate
+Step 2: Install dependencies
+
+bash
+pip install llama-cpp-python huggingface-hub
+Step 3: Run the model (one-liner)
+
+bash
+python3 -c "from llama_cpp import Llama; from huggingface_hub import hf_hub_download; m=Llama(hf_hub_download('yamraj047/nepal-legal-mistral-7b-GGUF','nepal-legal-Q4_K_M.gguf'),n_ctx=2048); print(m(input('Q: '),max_tokens=300)['choices'][0]['text'])"
+Example:
+
+text
+Q: What are the fraud penalties in Nepal?
+⚠️ First run will download ~4GB. Subsequent runs are instant.
 
 ---
 
