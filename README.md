@@ -71,11 +71,13 @@ Run the **full-precision model locally** using Hugging Face `transformers`.
 ```bash
 pip install transformers torch accelerate sentencepiece
 ▶️ Run the Model (Interactive – Terminal)
-python3 -c "from transformers import pipeline; p=pipeline('text-generation','yamraj047/nepal-legal-mistral-7b'); print(p(input('Q: '), max_new_tokens=300)[0]['generated_text'])"
+python3 -c "from transformers import pipeline; p=pipeline('text-generation','yamraj047/nepal-legal-mistral-7b'); print(p(input('Q: '), max_new_tokens=300)[0]['generated_text'])" ```
+
 Example:
 Q: Explain Article 20 of the Constitution of Nepal
 Press Enter to receive the answer.
 ⚠️ First run will download ~13.5 GB and may be slow on CPU systems.
+---
 💡 Low-RAM Alternative (Recommended for Laptops)
 If your system has limited memory, use the GGUF quantized model:
 Size: 4.07 GB
@@ -93,7 +95,7 @@ This system:
 ✅ Grounds responses in exact legal sections
 ✅ Reduces hallucination via chunk-level supervision
 ✅ Runs on consumer hardware
-
+---
 🗂️ Repository Structure
 .
 ├── pdf-to-text/
@@ -112,12 +114,14 @@ This system:
 │   └── mistral_finetuning.ipynb    # Instruction fine-tuning
 │
 └── README.md
+---
 🧱 Stage 1 — PDF → Clean Text
 Goal: Extract the law exactly as published.
 No chunking
 No summarization
 No interpretation
 This ensures legal authenticity.
+---
 🧩 Stage 2 — Legal Chunking + Metadata
 Each subsection becomes a single atomic legal unit:
 {
@@ -132,6 +136,7 @@ This enables:
 Traceable answers
 Precise retrieval
 Explainable AI outputs
+---
 🧠 Stage 3 — Instruction Dataset Engineering
 Instructions are systematically generated, not random:
 Legal explanation
@@ -139,30 +144,35 @@ Scope & applicability
 Classification questions
 Negative examples ("not mentioned in law")
 Each instruction retains full legal metadata.
+---
 🔥 Stage 4 — Fine-Tuning
 Base Model: Mistral-7B
 Training Type: Instruction tuning
 Focus: Legal understanding & reasoning
 Result: a Nepal-specific legal LLM, not a generic chatbot.
+---
 ⚡ Stage 5 — Quantization
 Metric	Value
 Original size	13.5 GB
 Quantized size	4.07 GB
 Method	Q4_K_M
 Compatible with	llama.cpp, LM Studio
+---
 🌐 Stage 6 — Deployment
 Gradio UI for public interaction
 FastAPI backend for integration
 GGUF inference for offline use
+---
 ⚠️ Legal Disclaimer
 This project is for research and educational purposes only.
 ❗ Not a substitute for professional legal advice.
+---
 👤 Author
 Yamraj Khadka
 Computer Engineering Undergraduate, Nepal 🇳🇵
-AI • Machine Learning • Legal NLP
 🤗 Hugging Face: https://huggingface.co/yamraj047
 🐙 GitHub: https://github.com/yamrajkhadka
+---
 ⭐ Support the Project
 If this project helped you:
 ⭐ Star the repository
@@ -171,11 +181,3 @@ If this project helped you:
 This work aims to raise the standard for Nepal-focused AI systems.
 
 ---
-
-If you want next:
-- 🎓 **Academic / journal-style README**
-- 📄 **Paper-ready abstract**
-- 📊 **Benchmark section**
-- 🧪 **Evaluation & limitations section**
-
-Just tell me — this project is already *very strong*.
