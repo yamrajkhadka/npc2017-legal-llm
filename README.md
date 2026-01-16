@@ -37,7 +37,7 @@ This project is designed to be **auditable, reproducible, and legally faithful**
 | Deployment                   | Description                 | Link                                                                                                                                     |
 | ---------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | **Full‑Precision Assistant** | Accurate legal reasoning    | [https://huggingface.co/spaces/yamraj047/penal-legal-assistant](https://huggingface.co/spaces/yamraj047/penal-legal-assistant)           |
-| **Fast API Version**         | Optimized backend inference | [https://huggingface.co/spaces/yamraj047/penal-legal-assistant-fast](https://huggingface.co/spaces/yamraj047/penal-legal-assistant-fast) |
+| **Fast API Version**         | Optimized backend inference | [https://huggingface.co/spaces/yamraj047/nepal-legal-assistant-fast](https://huggingface.co/spaces/yamraj047/nepal-legal-assistant-fast) |
 | **GGUF Quantized Assistant** | Runs on low‑RAM machines    | [https://huggingface.co/spaces/yamraj047/Nepall-legal-assist](https://huggingface.co/spaces/yamraj047/Nepall-legal-assist)               |
 
 ---
