@@ -55,6 +55,19 @@ The entire pipeline is **auditable, reproducible, and legally faithful**.
 | Nepal Legal Mistral-7B | GGUF (Q4_K_M) | **4.07 GB** | https://huggingface.co/yamraj047/nepal-legal-mistral-7b-GGUF |
 
 ---
+## 🚀 Community Adoption
+
+Within **24 hours of release**, this model was adopted by the open-source community:
+
+- Re-quantized into multiple GGUF variants by a well-known community maintainer
+- Distributed across Q2–Q8, IQ, and f16 formats for CPU-only inference
+- Integrated into the broader `llama.cpp` ecosystem for low-resource environments
+
+➡ Community GGUF distribution:
+https://huggingface.co/mradermacher/nepal-legal-mistral-7b-GGUF
+
+This rapid adoption validates the model’s **engineering quality, format compatibility, and real-world usability**.
+---
 
 ## 🚀 Run Nepal Legal Mistral-7B Locally (FP16)
 
